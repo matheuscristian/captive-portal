@@ -10,6 +10,7 @@ app = Flask(__name__, template_folder=TEMPLATES_DIR, static_folder=STATIC_DIR)
 
 @app.route('/')
 def index():
+    # This will make a message appear saying that the password is wrong
     retry = request.args.get('r', type = bool)
     
     # Render a simple HTML template for the captive portal page
